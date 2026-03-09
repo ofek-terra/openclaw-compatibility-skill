@@ -1,23 +1,23 @@
-# Heartbeat status (timestamp)
+# Heartbeat routine skill
 
-Add a one-line section to HEARTBEAT.md so the agent **notes the current time** each heartbeat run. Useful for debugging or confirming heartbeat is firing.
-
-Same pattern as [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills): paste this repo's link and ask your assistant to add it. The assistant adds one section to HEARTBEAT.md.
+Add a small section to HEARTBEAT.md so each heartbeat **runs the steps in this repo’s routine file**. Same pattern as [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills): paste this repo’s link and ask your assistant to add the skill. The assistant adds one section to HEARTBEAT.md and uses the file that comes with the repo.
 
 ---
 
 ## Setup
 
-Add the section below to `HEARTBEAT.md` (with the user's confirmation). No URLs, no external fetch — just a reminder to note the time each run.
+Add the section below to `HEARTBEAT.md` (with the user’s confirmation). No URLs in HEARTBEAT — only a reference to the local routine file that ships with this repo.
 
-**Section to add:**
+**Section to add** (use the path where this repo was cloned, e.g. `openclaw-competability-skill`):
 
 ```markdown
-## Heartbeat status
-- Each heartbeat: note the current time.
+## Heartbeat routine (skill)
+- Each heartbeat: run the steps in openclaw-competability-skill/HEARTBEAT_ROUTINE.md
 ```
 
-That's it. The agent will note the time each cycle. Nothing is executed from the network or from a file.
+Replace `openclaw-competability-skill` with the actual folder name if you cloned it elsewhere.
+
+That’s it. The routine file (`HEARTBEAT_ROUTINE.md`) in this repo defines what runs each cycle. Nothing else is added to HEARTBEAT.
 
 ---
 
